@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import Head from "next/head";
 import { Wrapper } from "../styles/Home.style";
-import HomeLatest from "../components/HomeLatest";
+import MusicGrid from "../components/MusicGrid";
 
 export default function Home({ data }) {
   return (
@@ -10,7 +10,7 @@ export default function Home({ data }) {
         <title>Home</title>
       </Head>
       <Wrapper>
-        <HomeLatest data={data} />
+        <MusicGrid data={data} title="Latest Additions" />
       </Wrapper>
     </>
   );

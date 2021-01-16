@@ -1,10 +1,10 @@
 import { Music } from "../../types";
 import SongCard from "../SongCard";
 import { Wrapper, Title, SongsContainer } from "./index.style";
-const HomeLatest = ({ data }: { data: Music[] }) => {
+const MusicGrid = ({ data, title }: { data: Music[]; title: string }) => {
   return (
     <Wrapper>
-      <Title>Latest Additions</Title>
+      <Title>{title}</Title>
       <SongsContainer>
         {data.map((item: Music) => (
           <SongCard key={item.id} data={item} />
@@ -14,4 +14,4 @@ const HomeLatest = ({ data }: { data: Music[] }) => {
   );
 };
 
-export default HomeLatest;
+export default MusicGrid;

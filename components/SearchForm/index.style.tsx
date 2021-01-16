@@ -13,7 +13,7 @@ export const FormTitle = styled.h1`
   text-align: center;
 `;
 
-export const Form = styled.form`
+export const Form = styled.form<{ err: boolean }>`
   background: ${({ theme: { colors } }) => colors.white};
   display: flex;
   height: 2.5rem;
@@ -28,6 +28,7 @@ export const Form = styled.form`
     max-width: 600px;
     align-self: center;
   }
+  border: ${({ err }) => (err ? "2px solid rgba(200,0,0,0.5)" : "none")};
 `;
 
 export const InputField = styled.input`
@@ -48,4 +49,9 @@ export const SubmitButton = styled.button`
   > svg {
     height: 1.4rem;
   }
+`;
+
+export const ErrorMessage = styled.p`
+  text-align: center;
+  color: rgba(200, 0, 0, 1);
 `;
