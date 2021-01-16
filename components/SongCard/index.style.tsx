@@ -52,3 +52,18 @@ export const AlbumName = styled.p`
   font-weight: 600;
   margin: 0.5rem 0;
 `;
+
+export const ArtistName = styled.p`
+  font-size: 1rem;
+  color: ${({ theme: { colors } }) => colors.white};
+  font-weight: 600;
+  margin: 0.5rem 0;
+`;
+
+export const Play = styled.div`
+  margin: 1rem 0;
+  > svg {
+    height: 2rem;
+    fill: ${({ theme: { colors } }) => colors.white};
+  }
+`;
