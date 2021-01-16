@@ -1,6 +1,11 @@
 import styled from "styled-components";
 
-export const Wrapper = styled.div``;
+export const Wrapper = styled.div`
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`;
 
 export const FormTitle = styled.h1`
   color: ${({ theme: { colors } }) => colors.white};
