@@ -5,8 +5,8 @@ import { Page } from "../../types";
 export const Wrapper = styled.nav`
   display: flex;
   justify-content: flex-end;
-  padding: 2rem 1rem;
-  position: absolute;
+  padding: 1.3rem 1rem;
+  position: fixed;
   width: 100%;
   top: 0;
   left: 0;
