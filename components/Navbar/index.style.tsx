@@ -1,12 +1,15 @@
-import styled, { css } from "styled-components";
+import styled, { css, keyframes } from "styled-components";
 import Link from "next/link";
 import { Page } from "../../types";
 
 export const Wrapper = styled.nav`
   display: flex;
   justify-content: flex-end;
-  padding: 2rem 0;
-  position: relative;
+  padding: 2rem 1rem;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
 `;
 
 export const MenuButton = styled.button<{ toggle: boolean }>`
@@ -37,6 +40,15 @@ export const MenuButton = styled.button<{ toggle: boolean }>`
     `}
 `;
 
+const animateMenu = keyframes`
+  from {
+    opacity:0;
+  }
+  to{
+    opacity:1;
+  }
+`;
+
 const MenuContainer = styled.ul<{ toggle: boolean; pagesLength: number }>`
   margin: 0;
   padding: 0;
@@ -45,25 +57,16 @@ const MenuContainer = styled.ul<{ toggle: boolean; pagesLength: number }>`
   top: 80%;
   right: 0rem;
   text-align: right;
-  opacity: ${({ toggle }) => (toggle ? 1 : 0)};
+  display: ${({ toggle }) => (toggle ? "flex" : "none")};
+  height: ${({ toggle }) => (toggle ? "auto" : "0")};
+  opacity: 0;
   overflow: hidden;
   transition: all 0.5s ease-in-out;
-  display: flex;
-  > li:nth-child(1) {
-    margin-right: ${({ toggle }) => (toggle ? "1rem" : "0")};
-    transition: margin-right 0.3s ease;
-    transition-delay: 0.3s;
-  }
-  > li:nth-child(2) {
-    margin-right: ${({ toggle }) => (toggle ? "1.5rem" : "0")};
-    transition: margin-right 0.3s ease;
-    transition-delay: 0.3s;
-  }
-  > li:nth-child(3) {
-    margin-right: ${({ toggle }) => (toggle ? "2rem" : "0")};
-    transition: margin-right 0.3s ease;
-    transition-delay: 0.3s;
-  }
+  transition-delay: 1s;
+  width: 100%;
+  justify-content: space-evenly;
+  animation: ${({ toggle }) => (toggle ? animateMenu : "")} 1s ease-in-out
+    forwards;
 `;
 const MenuItem = styled.li``;
 const MenuLink = styled.a`
