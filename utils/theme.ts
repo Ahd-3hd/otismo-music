@@ -27,6 +27,7 @@ export const colors = {
   primary: "#4A4A4A",
   secondary: "#FE6F61",
   grey: "#F5F5F5",
+  white: "#ffffff",
 };
 
 const theme: Theme = {

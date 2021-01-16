@@ -18,6 +18,7 @@ export interface Colors {
   primary: string;
   secondary: string;
   grey: string;
+  white: string;
 }
 
 export interface BreakPoints {
@@ -32,4 +33,9 @@ export interface Theme {
   fontSizes: FontSizes;
   breakpoints: BreakPoints;
   spaces: Space;
+}
+
+export interface Page {
+  title: string;
+  href: string;
 }
