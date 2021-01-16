@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  min-height: 400px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-top: 4rem;
 `;
 
 export const FormTitle = styled.h1`

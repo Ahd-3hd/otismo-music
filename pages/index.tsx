@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import Head from "next/head";
 import { Wrapper } from "../styles/Home.style";
-import SearchForm from "../components/SearchForm";
 import HomeLatest from "../components/HomeLatest";
 
 export default function Home({ data }) {
@@ -11,7 +10,6 @@ export default function Home({ data }) {
         <title>Home</title>
       </Head>
       <Wrapper>
-        <SearchForm />
         <HomeLatest data={data} />
       </Wrapper>
     </>
