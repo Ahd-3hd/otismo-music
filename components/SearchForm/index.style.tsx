@@ -22,6 +22,12 @@ export const Form = styled.form`
   align-items: center;
   padding: 0 1rem;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  @media (min-width: ${({ theme: { breakpoints } }) => breakpoints.md}) {
+    height: 4rem;
+    width: 70%;
+    max-width: 600px;
+    align-self: center;
+  }
 `;
 
 export const InputField = styled.input`
@@ -31,6 +37,7 @@ export const InputField = styled.input`
   height: 2rem;
   font-weight: 600;
   color: ${({ theme: { colors } }) => colors.primary};
+  outline: none;
   ::placeholder {
     font-weight: 400;
   }
