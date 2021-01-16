@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const Container = styled.a`
   height: 300px;
   position: relative;
   border-radius: 0.5rem;

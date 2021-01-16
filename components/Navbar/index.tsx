@@ -25,7 +25,6 @@ const Navbar: React.FC = () => {
       if (window.pageYOffset >= 150) setScrolled(true);
     });
     window.addEventListener("scroll", () => {
-      console.log(window.pageYOffset);
       window.pageYOffset >= 150 ? setScrolled(true) : setScrolled(false);
     });
   }, []);
