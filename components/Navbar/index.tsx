@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import MenuIcon from "../../svg/MenuIcon.svg";
 import { Wrapper, MenuButton, Menu } from "./index.style";
 
 const Navbar: React.FC = () => {
   const [toggle, setToggle] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const pages = [
     {
       title: "Home",
@@ -18,15 +19,26 @@ const Navbar: React.FC = () => {
       href: "/recentalbums",
     },
   ];
+
+  useEffect(() => {
+    window.addEventListener("load", () => {
+      if (window.pageYOffset >= 150) setScrolled(true);
+    });
+    window.addEventListener("scroll", () => {
+      console.log(window.pageYOffset);
+      window.pageYOffset >= 150 ? setScrolled(true) : setScrolled(false);
+    });
+  }, []);
   return (
-    <Wrapper>
+    <Wrapper scrolled={scrolled}>
       <MenuButton
         onClick={() => setToggle((prevState) => !prevState)}
         toggle={toggle}
+        scrolled={scrolled}
       >
         <MenuIcon />
       </MenuButton>
-      <Menu pages={pages} toggle={toggle} />
+      <Menu pages={pages} toggle={toggle} scrolled={scrolled} />
     </Wrapper>
   );
 };
