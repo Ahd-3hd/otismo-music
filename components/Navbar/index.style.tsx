@@ -45,11 +45,10 @@ const MenuContainer = styled.ul<{ toggle: boolean; pagesLength: number }>`
   top: 80%;
   right: 0rem;
   text-align: right;
-  height: ${({ toggle, pagesLength }) =>
-    toggle ? `${pagesLength * 3}rem` : `0`};
   opacity: ${({ toggle }) => (toggle ? 1 : 0)};
   overflow: hidden;
   transition: all 0.5s ease-in-out;
+  display: flex;
   > li:nth-child(1) {
     margin-right: ${({ toggle }) => (toggle ? "1rem" : "0")};
     transition: margin-right 0.3s ease;
@@ -66,9 +65,7 @@ const MenuContainer = styled.ul<{ toggle: boolean; pagesLength: number }>`
     transition-delay: 0.3s;
   }
 `;
-const MenuItem = styled.li`
-  height: 3rem;
-`;
+const MenuItem = styled.li``;
 const MenuLink = styled.a`
   color: ${({ theme: { colors } }) => colors.white};
 `;
