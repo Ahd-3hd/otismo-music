@@ -35,36 +35,33 @@ const SongCard = ({
     const output = url.split("by")[1].split("/")[0];
     return output ? output.toUpperCase() : "";
   };
+  const handleSongPlay = () => {
+    music.setMusicPlayer((prevState) => ({
+      ...prevState,
+      url: [
+        {
+          name,
+          musicSrc: url,
+          cover: album_images[0],
+          singer: artist_name,
+          duration,
+        },
+      ],
+      play: true,
+    }));
+  };
   return (
     <Container>
       <CardImg img={album_images[2]} />
       <CardDetails className="details">
-        <Link href={`/songs/${id}`} passHref>
-          <SongName>{name}</SongName>
-        </Link>
+        <SongName onClick={handleSongPlay}>{name}</SongName>
         <Link href={`/albums/${album_id}`} passHref>
           <AlbumName>{album_name}</AlbumName>
         </Link>
         <Link href={`/artists/${artist_name}`} passHref>
           <ArtistName>{artist_name}</ArtistName>
         </Link>
-        <Play
-          onClick={() =>
-            music.setMusicPlayer((prevState) => ({
-              ...prevState,
-              url: [
-                {
-                  name,
-                  musicSrc: url,
-                  cover: album_images[0],
-                  singer: artist_name,
-                  duration,
-                },
-              ],
-              play: true,
-            }))
-          }
-        >
+        <Play onClick={handleSongPlay}>
           <PlayIcon />
         </Play>
         <Link href={license_ccurl} passHref>

@@ -40,11 +40,15 @@ export const CardDetails = styled.div`
   transition: opacity 0.2s ease-out;
 `;
 
-export const SongName = styled.a`
+export const SongName = styled.button`
+  background: transparent;
+  border: none;
   font-size: 1.5rem;
   color: ${({ theme: { colors } }) => colors.white};
   font-weight: 600;
   margin: 0.5rem 0;
+  cursor: pointer;
+  padding: 0;
 `;
 export const AlbumName = styled.a`
   font-size: 1rem;
