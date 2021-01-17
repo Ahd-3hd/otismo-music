@@ -66,3 +66,9 @@ export interface Artist {
   id: string;
   name: string;
 }
+
+export interface GetArtistResponse {
+  musics: Music[];
+  albums: Album[];
+  artist: Artist;
+}

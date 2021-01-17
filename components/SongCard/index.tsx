@@ -25,6 +25,7 @@ const SongCard = ({
     id,
     duration,
     album_id,
+    artist_id,
   },
 }: {
   data: Music;
@@ -58,7 +59,7 @@ const SongCard = ({
         <Link href={`/albums/${album_id}`} passHref>
           <AlbumName>{album_name}</AlbumName>
         </Link>
-        <Link href={`/artists/${artist_name}`} passHref>
+        <Link href={`/artists/${artist_id}`} passHref>
           <ArtistName>{artist_name}</ArtistName>
         </Link>
         <Play onClick={handleSongPlay}>
