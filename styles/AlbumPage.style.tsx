@@ -8,11 +8,21 @@ export const Wrapper = styled.div``;
 export const Container = styled.div`
   padding: 1rem;
   margin: 2rem 0;
+  @media (min-width: ${({ theme: { breakpoints } }) => breakpoints.md}) {
+    max-width: 600px;
+    margin: 2rem auto;
+  }
 `;
 export const AlbumHeader = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  @media (min-width: ${({ theme: { breakpoints } }) => breakpoints.md}) {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 2rem 0;
+  }
 `;
 export const AlbumCover = styled.div<{ img: string }>`
   height: 200px;
@@ -20,10 +30,19 @@ export const AlbumCover = styled.div<{ img: string }>`
   background: url(${({ img }) => img}) no-repeat;
   background-size: cover;
   background-position: center;
+  border-radius: 1rem;
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.08);
+  @media (min-width: ${({ theme: { breakpoints } }) => breakpoints.md}) {
+    margin-right: 3rem;
+  }
 `;
 export const NamesContainer = styled.div`
   text-align: center;
   margin: 1rem 0;
+  @media (min-width: ${({ theme: { breakpoints } }) => breakpoints.md}) {
+    margin: 0;
+    text-align: left;
+  }
 `;
 export const AlbumName = styled.p`
   margin: 0;
@@ -31,6 +50,9 @@ export const AlbumName = styled.p`
   font-weight: 600;
   font-size: 1.5rem;
   text-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  @media (min-width: ${({ theme: { breakpoints } }) => breakpoints.md}) {
+    font-size: 2rem;
+  }
 `;
 export const ArtistName = styled.p`
   margin: 0;
