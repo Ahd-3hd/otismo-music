@@ -123,7 +123,7 @@ export const Song = ({
         onClick={() =>
           music.setMusicPlayer((prevState) => ({
             ...prevState,
-            url: [
+            song: [
               {
                 name: songName,
                 musicSrc: mp3Url,
