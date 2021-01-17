@@ -38,6 +38,7 @@ function MyApp({ Component, pageProps }) {
               quietUpdate
               clearPriorAudioLists
               audioLists={musicPlayer.url}
+              mode="full"
             />
           )}
         </Layout>

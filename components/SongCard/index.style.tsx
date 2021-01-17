@@ -60,6 +60,11 @@ export const ArtistName = styled.p`
   margin: 0.5rem 0;
 `;
 
+export const License = styled.a`
+  color: ${({ theme: { colors } }) => colors.white};
+  font-size: 0.7rem;
+`;
+
 export const Play = styled.button`
   margin: 1rem 0;
   background: transparent;

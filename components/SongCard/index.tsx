@@ -9,6 +9,7 @@ import {
   AlbumName,
   ArtistName,
   Play,
+  License,
 } from "./index.style";
 import PlayIcon from "../../svg/PlayIcon.svg";
 import { MusicContext } from "../../context/MusicContext";
@@ -28,6 +29,11 @@ const SongCard = ({
   data: Music;
 }) => {
   const music = useContext(MusicContext);
+
+  const getLicense = (url) => {
+    const output = url.split("by")[1].split("/")[0];
+    return output ? output.toUpperCase() : "";
+  };
   return (
     <Container>
       <CardImg img={album_images[2]} />
@@ -36,7 +42,7 @@ const SongCard = ({
           <SongName>{name}</SongName>
         </Link>
         <AlbumName>{album_name}</AlbumName>
-        <AlbumName>{artist_name}</AlbumName>
+        <ArtistName>{artist_name}</ArtistName>
         <Play
           onClick={() =>
             music.setMusicPlayer((prevState) => ({
@@ -56,6 +62,9 @@ const SongCard = ({
         >
           <PlayIcon />
         </Play>
+        <Link href={license_ccurl} passHref>
+          <License>CC BY{getLicense(license_ccurl)}</License>
+        </Link>
       </CardDetails>
     </Container>
   );
