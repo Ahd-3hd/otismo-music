@@ -1,3 +1,4 @@
+import { useContext } from "react";
 import { Music } from "../../types";
 import Link from "next/link";
 import {
@@ -10,26 +11,52 @@ import {
   Play,
 } from "./index.style";
 import PlayIcon from "../../svg/PlayIcon.svg";
+import { MusicContext } from "../../context/MusicContext";
 
 const SongCard = ({
-  data: { name, artist_name, license_ccurl, album_images, url, album_name, id },
+  data: {
+    name,
+    artist_name,
+    license_ccurl,
+    album_images,
+    url,
+    album_name,
+    id,
+    duration,
+  },
 }: {
   data: Music;
 }) => {
+  const music = useContext(MusicContext);
   return (
-    <Link href={`/songs/${id}`} passHref>
-      <Container>
-        <CardImg img={album_images[2]} />
-        <CardDetails className="details">
+    <Container>
+      <CardImg img={album_images[2]} />
+      <CardDetails className="details">
+        <Link href={`/songs/${id}`} passHref>
           <SongName>{name}</SongName>
-          <AlbumName>{album_name}</AlbumName>
-          <AlbumName>{artist_name}</AlbumName>
-          <Play>
-            <PlayIcon />
-          </Play>
-        </CardDetails>
-      </Container>
-    </Link>
+        </Link>
+        <AlbumName>{album_name}</AlbumName>
+        <AlbumName>{artist_name}</AlbumName>
+        <Play
+          onClick={() =>
+            music.setMusicPlayer({
+              url: [
+                {
+                  name,
+                  musicSrc: url,
+                  cover: album_images[0],
+                  singer: artist_name,
+                  duration,
+                },
+              ],
+              play: true,
+            })
+          }
+        >
+          <PlayIcon />
+        </Play>
+      </CardDetails>
+    </Container>
   );
 };
 

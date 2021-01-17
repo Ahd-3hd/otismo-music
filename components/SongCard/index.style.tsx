@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Container = styled.a`
+export const Container = styled.div`
   height: 300px;
   position: relative;
   border-radius: 0.5rem;
@@ -40,7 +40,7 @@ export const CardDetails = styled.div`
   transition: opacity 0.2s ease-out;
 `;
 
-export const SongName = styled.p`
+export const SongName = styled.a`
   font-size: 1.5rem;
   color: ${({ theme: { colors } }) => colors.white};
   font-weight: 600;
@@ -60,8 +60,11 @@ export const ArtistName = styled.p`
   margin: 0.5rem 0;
 `;
 
-export const Play = styled.div`
+export const Play = styled.button`
   margin: 1rem 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
   > svg {
     height: 2rem;
     fill: ${({ theme: { colors } }) => colors.white};
