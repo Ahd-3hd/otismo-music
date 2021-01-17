@@ -39,7 +39,8 @@ const SongCard = ({
         <AlbumName>{artist_name}</AlbumName>
         <Play
           onClick={() =>
-            music.setMusicPlayer({
+            music.setMusicPlayer((prevState) => ({
+              ...prevState,
               url: [
                 {
                   name,
@@ -50,7 +51,7 @@ const SongCard = ({
                 },
               ],
               play: true,
-            })
+            }))
           }
         >
           <PlayIcon />
