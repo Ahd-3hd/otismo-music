@@ -13,10 +13,11 @@ function MyApp({ Component, pageProps }) {
     play: false,
   });
 
-  const customDownloader = (downloadInfo) => {
+  const customDownloader = async (downloadInfo) => {
     const link = document.createElement("a");
-    link.href = downloadInfo.src; // a.mp3
+    link.href = downloadInfo.src;
     link.download = downloadInfo.filename || "test";
+    link.setAttribute("download", downloadInfo.filename || "test");
     document.body.appendChild(link);
     link.click();
   };
