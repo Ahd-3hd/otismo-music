@@ -66,3 +66,5 @@ export const AlbumCard = styled.a<{ img: string; albumName: string }>`
     font-size: 1.3rem;
   }
 `;
+
+export const MusicContainer = styled.div``;

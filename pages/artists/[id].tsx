@@ -8,6 +8,7 @@ import {
   AlbumsContainer,
   AlbumCard,
 } from "../../styles/ArtistPage.style";
+import MusicGrid from "../../components/MusicGrid";
 
 const ArtistPage = ({ data }: { data: GetArtistResponse }) => {
   console.log(data);
@@ -28,6 +29,8 @@ const ArtistPage = ({ data }: { data: GetArtistResponse }) => {
             );
           })}
         </AlbumsContainer>
+        <Subtitle>Songs</Subtitle>
+        <MusicGrid data={data.musics} title="Latest Additions" />
       </Wrapper>
     </>
   );

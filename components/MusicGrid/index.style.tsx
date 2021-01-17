@@ -14,14 +14,13 @@ export const Title = styled.p`
 export const SongsContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr;
+  grid-auto-rows: 250px;
   grid-gap: 2rem;
   @media (min-width: ${({ theme: { breakpoints } }) => breakpoints.md}) {
-    grid-template-columns: 1fr 1fr;
-  }
-  @media (min-width: ${({ theme: { breakpoints } }) => breakpoints.lg}) {
     grid-template-columns: 1fr 1fr 1fr;
   }
-  @media (min-width: ${({ theme: { breakpoints } }) => breakpoints.xl}) {
+
+  @media (min-width: ${({ theme: { breakpoints } }) => breakpoints.lg}) {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 `;
