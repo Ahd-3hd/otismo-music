@@ -9,7 +9,7 @@ import { MusicContext } from "../context/MusicContext";
 
 function MyApp({ Component, pageProps }) {
   const [musicPlayer, setMusicPlayer] = useState({
-    url: [],
+    song: [],
     play: false,
   });
 
@@ -37,7 +37,7 @@ function MyApp({ Component, pageProps }) {
               customDownloader={customDownloader}
               quietUpdate
               clearPriorAudioLists
-              audioLists={musicPlayer.url}
+              audioLists={musicPlayer.song}
               mode="full"
             />
           )}

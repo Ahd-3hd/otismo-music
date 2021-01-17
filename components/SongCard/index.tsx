@@ -38,7 +38,7 @@ const SongCard = ({
   const handleSongPlay = () => {
     music.setMusicPlayer((prevState) => ({
       ...prevState,
-      url: [
+      song: [
         {
           name,
           musicSrc: url,
