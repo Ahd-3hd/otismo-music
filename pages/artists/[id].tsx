@@ -11,7 +11,6 @@ import {
 import MusicGrid from "../../components/MusicGrid";
 
 const ArtistPage = ({ data }: { data: GetArtistResponse }) => {
-  console.log(data);
   return (
     <>
       <Head>
@@ -29,8 +28,7 @@ const ArtistPage = ({ data }: { data: GetArtistResponse }) => {
             );
           })}
         </AlbumsContainer>
-        <Subtitle>Songs</Subtitle>
-        <MusicGrid data={data.musics} title="Latest Additions" />
+        <MusicGrid data={data.musics} title="Songs" />
       </Wrapper>
     </>
   );

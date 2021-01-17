@@ -12,14 +12,14 @@ export const ArtistName = styled.h1`
 `;
 
 export const Subtitle = styled.p`
+  font-size: 1.3rem;
+  font-weight: 600;
   color: ${({ theme: { colors } }) => colors.white};
-  text-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
-  font-size: 1.2rem;
-  font-weight: 500;
-  margin: 2rem 0;
+  text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
 `;
 
 export const AlbumsContainer = styled.div`
+  margin: 4rem 0;
   display: grid;
   grid-template-columns: 1fr;
   grid-auto-rows: 250px;
