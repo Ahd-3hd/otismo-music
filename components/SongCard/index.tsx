@@ -41,8 +41,12 @@ const SongCard = ({
         <Link href={`/songs/${id}`} passHref>
           <SongName>{name}</SongName>
         </Link>
-        <AlbumName>{album_name}</AlbumName>
-        <ArtistName>{artist_name}</ArtistName>
+        <Link href={`/albums/${album_name}`} passHref>
+          <AlbumName>{album_name}</AlbumName>
+        </Link>
+        <Link href={`/artists/${artist_name}`} passHref>
+          <ArtistName>{artist_name}</ArtistName>
+        </Link>
         <Play
           onClick={() =>
             music.setMusicPlayer((prevState) => ({

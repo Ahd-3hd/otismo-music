@@ -46,14 +46,14 @@ export const SongName = styled.a`
   font-weight: 600;
   margin: 0.5rem 0;
 `;
-export const AlbumName = styled.p`
+export const AlbumName = styled.a`
   font-size: 1rem;
   color: ${({ theme: { colors } }) => colors.white};
   font-weight: 600;
   margin: 0.5rem 0;
 `;
 
-export const ArtistName = styled.p`
+export const ArtistName = styled.a`
   font-size: 1rem;
   color: ${({ theme: { colors } }) => colors.white};
   font-weight: 600;
