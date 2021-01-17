@@ -53,3 +53,16 @@ export interface Music {
   album_images: string[];
   added_at: string; // Date
 }
+
+export interface Album {
+  id: string;
+  name: string;
+  artist_id: string;
+  images: string[];
+  added_at: string; // Date
+}
+
+export interface Artist {
+  id: string;
+  name: string;
+}

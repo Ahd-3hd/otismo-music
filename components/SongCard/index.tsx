@@ -24,6 +24,7 @@ const SongCard = ({
     album_name,
     id,
     duration,
+    album_id,
   },
 }: {
   data: Music;
@@ -41,7 +42,7 @@ const SongCard = ({
         <Link href={`/songs/${id}`} passHref>
           <SongName>{name}</SongName>
         </Link>
-        <Link href={`/albums/${album_name}`} passHref>
+        <Link href={`/albums/${album_id}`} passHref>
           <AlbumName>{album_name}</AlbumName>
         </Link>
         <Link href={`/artists/${artist_name}`} passHref>
