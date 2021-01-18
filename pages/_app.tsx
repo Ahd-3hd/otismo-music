@@ -2,6 +2,7 @@ import { ThemeProvider } from "styled-components";
 import { useState } from "react";
 import "../styles/globals.css";
 import theme from "../utils/theme";
+import darkTheme from "../utils/darkTheme";
 import Layout from "../components/Layout";
 import ReactJkMusicPlayer from "react-jinke-music-player";
 import "react-jinke-music-player/assets/index.css";

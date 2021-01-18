@@ -11,7 +11,8 @@ export const Wrapper = styled.nav<{ scrolled: boolean }>`
   align-items: center;
   justify-content: space-between;
   box-sizing: border-box;
-  background: ${({ scrolled }) => (scrolled ? "#fff" : "transparent")};
+  /* background: ${({ theme: { colors }, scrolled }) =>
+    scrolled ? colors.background : "transparent"};
   transition: all 0.4s ease-in-out;
   box-shadow: ${({ scrolled }) =>
     scrolled
@@ -20,8 +21,8 @@ export const Wrapper = styled.nav<{ scrolled: boolean }>`
   > button,
   a {
     color: ${({ theme: { colors }, scrolled }) =>
-      scrolled ? "#333333" : colors.white};
-  }
+    scrolled ? "#bdc3c7" : colors.text};
+  } */
 `;
 
 export const BackButton = styled.button`
@@ -29,8 +30,9 @@ export const BackButton = styled.button`
   background: transparent;
   font-weight: 800;
   border: none;
-  text-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+  /* text-shadow: 0 0 2px rgba(0, 0, 0, 0.2); */
   font-size: 1.3rem;
+  cursor: pointer;
 `;
 
 export const HomeLink = styled.a`
@@ -38,6 +40,7 @@ export const HomeLink = styled.a`
   background: transparent;
   font-weight: 800;
   border: none;
-  text-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+  /* text-shadow: 0 0 2px rgba(0, 0, 0, 0.2); */
   font-size: 1.3rem;
+  cursor: pointer;
 `;

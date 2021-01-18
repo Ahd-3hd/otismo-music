@@ -24,19 +24,19 @@ export const spaces: Space = {
 };
 
 export const colors = {
-  primary: "#3400C6",
-  secondary: "#C60000",
-  tertiary: "#c471ed",
-  background: "#ffffff",
+  primary: "#0F2027",
+  secondary: "#203A43",
+  tertiary: "#2C5364",
   grey: "#F5F5F5",
-  text: "#2c3e50",
+  background: "#2c3e50",
+  text: "#ffffff",
 };
 
-const theme: Theme = {
+const darkTheme: Theme = {
   colors,
   fontSizes,
   breakpoints,
   spaces,
 };
 
-export default theme;
+export default darkTheme;

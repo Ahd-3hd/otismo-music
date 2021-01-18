@@ -17,8 +17,10 @@ export interface FontSizes {
 export interface Colors {
   primary: string;
   secondary: string;
+  tertiary: string;
   grey: string;
-  white: string;
+  background: string;
+  text: string;
 }
 
 export interface BreakPoints {

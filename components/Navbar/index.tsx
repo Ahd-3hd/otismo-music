@@ -18,18 +18,17 @@ const Navbar: React.FC = () => {
       window.pageYOffset > 100 ? setScrolled(true) : setScrolled(false);
     });
   }, []);
-  return (
-    <Wrapper scrolled={scrolled}>
-      {router.pathname !== "/" ? (
-        <>
-          <BackButton onClick={handleBack}>Back</BackButton>
-          <Link href="/" passHref>
-            <HomeLink>Home</HomeLink>
-          </Link>
-        </>
-      ) : null}
-    </Wrapper>
-  );
+  if (router.pathname !== "/") {
+    return (
+      <Wrapper scrolled={scrolled}>
+        <BackButton onClick={handleBack}>Back</BackButton>
+        <Link href="/" passHref>
+          <HomeLink>Home</HomeLink>
+        </Link>
+      </Wrapper>
+    );
+  }
+  return null;
 };
 
 export default Navbar;
