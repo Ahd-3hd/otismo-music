@@ -1,12 +1,19 @@
 import { useRouter } from "next/router";
-import { useState, useEffect } from "react";
-import { Wrapper, BackButton, HomeLink } from "./index.style";
+import { useState, useEffect, useContext } from "react";
+import {
+  Wrapper,
+  BackButton,
+  HomeLink,
+  HomeDarkContainer,
+  ToggleTheme,
+} from "./index.style";
 import Link from "next/link";
+import { MusicContext } from "../../context/MusicContext";
 
 const Navbar: React.FC = () => {
   const router = useRouter();
   const [scrolled, setScrolled] = useState(false);
-
+  const music = useContext(MusicContext);
   const handleBack = () => {
     router.back();
   };
@@ -18,17 +25,22 @@ const Navbar: React.FC = () => {
       window.pageYOffset > 100 ? setScrolled(true) : setScrolled(false);
     });
   }, []);
-  if (router.pathname !== "/") {
-    return (
-      <Wrapper scrolled={scrolled}>
+  return (
+    <Wrapper scrolled={scrolled}>
+      {router.pathname !== "/" && (
         <BackButton onClick={handleBack}>Back</BackButton>
+      )}
+      <HomeDarkContainer>
         <Link href="/" passHref>
           <HomeLink>Home</HomeLink>
         </Link>
-      </Wrapper>
-    );
-  }
-  return null;
+        <ToggleTheme
+          themeMode={music.themeMode === "dark"}
+          onClick={() => music.toggleTheme()}
+        />
+      </HomeDarkContainer>
+    </Wrapper>
+  );
 };
 
 export default Navbar;

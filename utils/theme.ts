@@ -24,12 +24,19 @@ export const spaces: Space = {
 };
 
 export const colors = {
-  primary: "#3400C6",
-  secondary: "#C60000",
-  tertiary: "#c471ed",
-  background: "#ffffff",
-  grey: "#F5F5F5",
-  text: "#2c3e50",
+  textPrimary: "#ffffff",
+  textSecondary: "#6D6D6D",
+  cardBackground: "#ffffff",
+  gradientOne: "#12C2E9",
+  gradientTwo: "#C471ED",
+  gradientThree: "#F64F59",
+  blobOne: "#3400C6",
+  blobTwo: "#C60000",
+  greyOne: "#3B3B3B",
+  greyTwo: "#888888",
+  greyThree: "#C4C4C4",
+  white: "#ffffff",
+  black: "#252525",
 };
 
 const theme: Theme = {

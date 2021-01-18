@@ -9,7 +9,7 @@ export const Container = styled.div`
       opacity: 1;
     }
   }
-  /* box-shadow: rgba(100, 100, 111, 0.6) 0px 7px 29px 0px; */
+  box-shadow: rgba(100, 100, 111, 0.6) 0px 7px 29px 0px;
 `;
 
 export const CardImg = styled.div<{ img: string }>`
@@ -28,7 +28,11 @@ export const CardDetails = styled.div`
   position: absolute;
   width: 100%;
   height: 100%;
-  /* background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #292c4b 100%); */
+  background: linear-gradient(
+    180deg,
+    ${({ theme: { colors } }) => `${colors.gradientThree}66`} 0%,
+    ${({ theme: { colors } }) => colors.gradientOne} 100%
+  );
   z-index: 2;
   display: flex;
   flex-direction: column;
@@ -43,7 +47,7 @@ export const SongName = styled.button`
   background: transparent;
   border: none;
   font-size: 1.5rem;
-  /* color: ${({ theme: { colors } }) => colors.text}; */
+  color: ${({ theme: { colors } }) => colors.textPrimary};
   font-weight: 600;
   margin: 0.5rem 0;
   cursor: pointer;
@@ -51,20 +55,20 @@ export const SongName = styled.button`
 `;
 export const AlbumName = styled.a`
   font-size: 1rem;
-  /* color: ${({ theme: { colors } }) => colors.text}; */
+  color: ${({ theme: { colors } }) => colors.textPrimary};
   font-weight: 600;
   margin: 0.5rem 0;
 `;
 
 export const ArtistName = styled.a`
   font-size: 1rem;
-  /* color: ${({ theme: { colors } }) => colors.text}; */
+  color: ${({ theme: { colors } }) => colors.textPrimary};
   font-weight: 600;
   margin: 0.5rem 0;
 `;
 
 export const License = styled.a`
-  /* color: ${({ theme: { colors } }) => colors.text}; */
+  color: ${({ theme: { colors } }) => colors.textPrimary};
   font-size: 0.7rem;
 `;
 
@@ -75,6 +79,6 @@ export const Play = styled.button`
   cursor: pointer;
   > svg {
     height: 2rem;
-    /* fill: ${({ theme: { colors } }) => colors.text}; */
+    fill: ${({ theme: { colors } }) => colors.textPrimary};
   }
 `;

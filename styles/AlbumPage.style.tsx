@@ -31,7 +31,7 @@ export const AlbumCover = styled.div<{ img: string }>`
   background-size: cover;
   background-position: center;
   border-radius: 1rem;
-  /* box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.08); */
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.08);
   @media (min-width: ${({ theme: { breakpoints } }) => breakpoints.md}) {
     margin-right: 3rem;
   }
@@ -46,21 +46,21 @@ export const NamesContainer = styled.div`
 `;
 export const AlbumName = styled.p`
   margin: 0;
-  /* color: ${({ theme: { colors } }) => colors.text}; */
+  color: ${({ theme: { colors } }) => colors.textPrimary};
   font-weight: 600;
   font-size: 1.5rem;
-  /* text-shadow: 0 0 3px rgba(0, 0, 0, 0.2); */
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
   @media (min-width: ${({ theme: { breakpoints } }) => breakpoints.md}) {
     font-size: 2rem;
   }
 `;
 export const ArtistName = styled.p`
   margin: 0;
-  /* color: ${({ theme: { colors } }) => colors.text}; */
+  color: ${({ theme: { colors } }) => colors.textPrimary};
   margin-top: 1rem;
   font-weight: 600;
   font-size: 1rem;
-  /* text-shadow: 0 0 3px rgba(0, 0, 0, 0.2); */
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
 `;
 
 export const SongsContainer = styled.div``;
@@ -68,7 +68,7 @@ const MusicBar = styled.div`
   display: flex;
   align-items: center;
   padding-bottom: 0.3rem;
-  /* border-bottom: 1.5px solid ${({ theme: { colors } }) => colors.text}; */
+  border-bottom: 1.5px solid ${({ theme: { colors } }) => colors.textPrimary};
 `;
 const PlayButton = styled.button`
   flex: 1;
@@ -77,21 +77,27 @@ const PlayButton = styled.button`
   outline: none;
   cursor: pointer;
   > svg {
-    /* fill: ${({ theme: { colors } }) => colors.text}; */
+    fill: ${({ theme: { colors } }) => colors.textPrimary};
     height: 1.5rem;
   }
 `;
 const SongName = styled.p`
-  /* color: ${({ theme: { colors } }) => colors.text}; */
+  color: ${({ theme: { colors } }) => colors.textPrimary};
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+  font-weight: 600;
   flex: 3;
 `;
 const License = styled.p`
-  /* color: ${({ theme: { colors } }) => colors.text}; */
+  color: ${({ theme: { colors } }) => colors.textPrimary};
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+  font-weight: 600;
   flex: 1;
 `;
 const Duration = styled.p`
   flex: 1;
-  /* color: ${({ theme: { colors } }) => colors.text}; */
+  color: ${({ theme: { colors } }) => colors.textPrimary};
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+  font-weight: 600;
 `;
 
 export const Song = ({

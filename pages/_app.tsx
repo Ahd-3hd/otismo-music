@@ -1,14 +1,16 @@
 import { ThemeProvider } from "styled-components";
 import { useState } from "react";
 import "../styles/globals.css";
-import theme from "../utils/theme";
+import lighTheme from "../utils/theme";
 import darkTheme from "../utils/darkTheme";
 import Layout from "../components/Layout";
 import ReactJkMusicPlayer from "react-jinke-music-player";
 import "react-jinke-music-player/assets/index.css";
 import { MusicContext } from "../context/MusicContext";
+import { useTheme } from "../customHooks/useTheme";
 
 function MyApp({ Component, pageProps }) {
+  const [theme, toggleTheme] = useTheme();
   const [musicPlayer, setMusicPlayer] = useState({
     song: [],
     play: false,
@@ -28,9 +30,11 @@ function MyApp({ Component, pageProps }) {
       value={{
         ...musicPlayer,
         setMusicPlayer,
+        toggleTheme,
+        themeMode: theme,
       }}
     >
-      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={theme === "dark" ? darkTheme : lighTheme}>
         <Layout>
           <Component {...pageProps} />
           {musicPlayer.play && (
