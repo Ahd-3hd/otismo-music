@@ -46,7 +46,7 @@ export const NamesContainer = styled.div`
 `;
 export const AlbumName = styled.p`
   margin: 0;
-  color: ${({ theme: { colors } }) => colors.white};
+  color: ${({ theme: { colors } }) => colors.textPrimary};
   font-weight: 600;
   font-size: 1.5rem;
   text-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
@@ -56,7 +56,7 @@ export const AlbumName = styled.p`
 `;
 export const ArtistName = styled.p`
   margin: 0;
-  color: ${({ theme: { colors } }) => colors.white};
+  color: ${({ theme: { colors } }) => colors.textPrimary};
   margin-top: 1rem;
   font-weight: 600;
   font-size: 1rem;
@@ -68,7 +68,7 @@ const MusicBar = styled.div`
   display: flex;
   align-items: center;
   padding-bottom: 0.3rem;
-  border-bottom: 1.5px solid ${({ theme: { colors } }) => colors.white};
+  border-bottom: 1.5px solid ${({ theme: { colors } }) => colors.textPrimary};
 `;
 const PlayButton = styled.button`
   flex: 1;
@@ -77,24 +77,27 @@ const PlayButton = styled.button`
   outline: none;
   cursor: pointer;
   > svg {
-    fill: ${({ theme: { colors } }) => colors.white};
+    fill: ${({ theme: { colors } }) => colors.textPrimary};
     height: 1.5rem;
   }
 `;
 const SongName = styled.p`
-  color: ${({ theme: { colors } }) => colors.white};
-  text-decoration: 0 0 2px rgba(0, 0, 0, 0.2);
+  color: ${({ theme: { colors } }) => colors.textPrimary};
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+  font-weight: 600;
   flex: 3;
 `;
 const License = styled.p`
-  color: ${({ theme: { colors } }) => colors.white};
-  text-decoration: 0 0 2px rgba(0, 0, 0, 0.2);
+  color: ${({ theme: { colors } }) => colors.textPrimary};
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+  font-weight: 600;
   flex: 1;
 `;
 const Duration = styled.p`
   flex: 1;
-  color: ${({ theme: { colors } }) => colors.white};
-  text-decoration: 0 0 2px rgba(0, 0, 0, 0.2);
+  color: ${({ theme: { colors } }) => colors.textPrimary};
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+  font-weight: 600;
 `;
 
 export const Song = ({

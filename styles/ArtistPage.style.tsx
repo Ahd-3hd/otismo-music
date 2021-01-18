@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
 `;
 
 export const ArtistName = styled.h1`
-  color: ${({ theme: { colors } }) => colors.white};
+  color: ${({ theme: { colors } }) => colors.textPrimary};
   text-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
   text-align: center;
 `;
@@ -14,7 +14,7 @@ export const ArtistName = styled.h1`
 export const Subtitle = styled.p`
   font-size: 1.3rem;
   font-weight: 600;
-  color: ${({ theme: { colors } }) => colors.white};
+  color: ${({ theme: { colors } }) => colors.textPrimary};
   text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
 `;
 
@@ -46,15 +46,15 @@ export const AlbumCard = styled.a<{ img: string; albumName: string }>`
     content: "${({ albumName }) => albumName}";
     background: linear-gradient(
       180deg,
-      rgba(255, 255, 255, 0) 0%,
-      #292c4b 100%
+      ${({ theme: { colors } }) => `${colors.gradientOne}00`} 0%,
+      ${({ theme: { colors } }) => `${colors.gradientTwo}55`} 100%
     );
     position: absolute;
     top: 0;
     left: 0;
     font-size: 2rem;
     z-index: 2;
-    color: ${({ theme: { colors } }) => colors.white};
+    color: ${({ theme: { colors } }) => colors.textPrimary};
     text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
     width: 100%;
     height: 100%;

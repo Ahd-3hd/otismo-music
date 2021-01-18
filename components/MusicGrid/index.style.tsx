@@ -7,8 +7,8 @@ export const Wrapper = styled.div`
 export const Title = styled.p`
   font-size: 1.3rem;
   font-weight: 600;
-  color: ${({ theme: { colors } }) => colors.white};
-  text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
+  color: ${({ theme: { colors } }) => colors.textPrimary};
+  text-shadow: 0px 0px 3px ${({ theme: { colors } }) => colors.greyTwo};
 `;
 
 export const SongsContainer = styled.div`

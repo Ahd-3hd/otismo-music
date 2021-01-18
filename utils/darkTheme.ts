@@ -25,11 +25,11 @@ export const spaces: Space = {
 
 export const colors = {
   textPrimary: "#ffffff",
-  textSecondary: "#6D6D6D",
-  cardBackground: "#ffffff",
-  gradientOne: "#12C2E9",
-  gradientTwo: "#C471ED",
-  gradientThree: "#F64F59",
+  textSecondary: "#DBDBDB",
+  cardBackground: "#525252",
+  gradientOne: "#732323",
+  gradientTwo: "#4F1B69",
+  gradientThree: "#2D1A65",
   blobOne: "#3400C6",
   blobTwo: "#C60000",
   greyOne: "#3B3B3B",
@@ -39,11 +39,11 @@ export const colors = {
   black: "#252525",
 };
 
-const theme: Theme = {
+const darkTheme: Theme = {
   colors,
   fontSizes,
   breakpoints,
   spaces,
 };
 
-export default theme;
+export default darkTheme;

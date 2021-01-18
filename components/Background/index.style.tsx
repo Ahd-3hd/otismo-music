@@ -14,9 +14,9 @@ export const Gradient = styled.div`
   height: 100%;
   background: linear-gradient(
     116.95deg,
-    #12c2e9 0%,
-    #c471ed 48.03%,
-    #f64f59 99.65%
+    ${({ theme: { colors } }) => colors.gradientOne} 0%,
+    ${({ theme: { colors } }) => colors.gradientTwo} 48.03%,
+    ${({ theme: { colors } }) => colors.gradientThree} 99.65%
   );
   opacity: 0.6;
 `;
@@ -58,6 +58,7 @@ export const BlobContainerOne = styled.div`
   opacity: 0.3;
   > svg {
     width: 100%;
+    fill: ${({ theme: { colors } }) => colors.blobTwo};
   }
 `;
 export const BlobContainerTwo = styled.div`
@@ -72,5 +73,6 @@ export const BlobContainerTwo = styled.div`
   opacity: 0.3;
   > svg {
     width: 100%;
+    fill: ${({ theme: { colors } }) => colors.blobOne};
   }
 `;

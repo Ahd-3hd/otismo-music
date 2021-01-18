@@ -14,11 +14,35 @@ export interface FontSizes {
   xl: string;
 }
 
+/**
+ * text secondary
+ * text primary
+ * background: cards, input fields
+ * cards background: cards overlay
+ * blobs background: primary:3400C6, secondary:C60000
+ * background gradient: blue 12C2E9, purple C471ED, red F64F59
+ * grey 1
+ * grey 2
+ * grey 3
+ *
+ *
+ *
+ */
+
 export interface Colors {
-  primary: string;
-  secondary: string;
-  grey: string;
+  textPrimary: string;
+  textSecondary: string;
+  cardBackground: string;
+  gradientOne: string;
+  gradientTwo: string;
+  gradientThree: string;
+  blobOne: string;
+  blobTwo: string;
+  greyOne: string;
+  greyTwo: string;
+  greyThree: string;
   white: string;
+  black: string;
 }
 
 export interface BreakPoints {
