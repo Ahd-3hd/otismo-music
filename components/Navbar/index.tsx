@@ -5,7 +5,6 @@ import {
   BackButton,
   HomeLink,
   HomeDarkContainer,
-  ToggleTheme,
 } from "./index.style";
 import Link from "next/link";
 import { MusicContext } from "../../context/MusicContext";
