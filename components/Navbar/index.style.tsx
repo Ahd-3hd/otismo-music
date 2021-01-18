@@ -48,28 +48,7 @@ export const HomeLink = styled.a`
 export const HomeDarkContainer = styled.div`
   display: flex;
   align-items: center;
-`;
-
-export const ToggleTheme = styled.div<{ themeMode: boolean }>`
-  height: 1rem;
-  width: 3rem;
-  background: ${({ theme: { colors } }) => colors.textSecondary};
-  margin-left: 1rem;
-  border-radius: 3rem;
-  position: relative;
-  box-sizing: border-box;
-  transition: background 0.3s ease-in-out;
-  ::after {
-    content: "";
-    position: absolute;
-    width: 1rem;
-    height: 1rem;
-    top: 0;
-    left: ${({ themeMode }) => (themeMode ? "2.5rem" : "0.3rem")};
-    transform: translateX(-50%);
-    background: ${({ theme: { colors } }) => colors.gradientOne};
-    border-radius: 1rem;
-    box-sizing: border-box;
-    transition: 0.3s ease-in-out;
+  > .toggler {
+    margin-left: 1rem;
   }
 `;

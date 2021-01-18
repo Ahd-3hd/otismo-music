@@ -9,6 +9,7 @@ import {
 } from "./index.style";
 import Link from "next/link";
 import { MusicContext } from "../../context/MusicContext";
+import DarkModeToggle from "react-dark-mode-toggle";
 
 const Navbar: React.FC = () => {
   const router = useRouter();
@@ -34,9 +35,12 @@ const Navbar: React.FC = () => {
         <Link href="/" passHref>
           <HomeLink>Home</HomeLink>
         </Link>
-        <ToggleTheme
-          themeMode={music.themeMode === "dark"}
-          onClick={() => music.toggleTheme()}
+        <DarkModeToggle
+          onChange={() => music.toggleTheme()}
+          checked={music.themeMode === "dark"}
+          size={50}
+          className="toggler"
+          speed={2}
         />
       </HomeDarkContainer>
     </Wrapper>
